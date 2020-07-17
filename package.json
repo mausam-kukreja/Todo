@@ -1,12 +1,22 @@
 {
-  "name": "Todo",
+  "name": "todo",
   "version": "1.0.0",
+  "description": "building todo app using mongodb, express, react and nodejs",
   "main": "index.js",
-  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "start-watch": "nodemon index.js",
+    "dev": "concurrently \"yarn run start-watch\" \"cd client && yarn start\""
+    },
+    "author": "Mausam Kukreja",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "body-parser": "^1.18.3",
     "express": "^4.17.1",
-    "mongodb": "^3.5.9",
     "mongoose": "^5.9.24"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
   }
 }
